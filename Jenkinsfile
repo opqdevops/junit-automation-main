@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout Codebase'){
             steps{
                 cleanWs()
-                git branch: 'main', credentialsId: 'git_credentials', url: 'https://github.com/opqdevops/java-tomcat-maven-example.git'
+                git branch: 'main', credentialsId: 'git_credentials', url: 'https://github.com/opqdevops/junit-automation-main.git'
             }
         }
 
