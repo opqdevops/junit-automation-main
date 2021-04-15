@@ -6,8 +6,7 @@ pipeline {
         stage('Checkout Codebase'){
             steps{
                 cleanWs()
-                checkout scm: [$class: 'GitSCM', git branch: 'main',userRemoteConfigs:
-                [[credentialsId: 'git_credentials', url: 'https://github.com/opqdevops/java-tomcat-maven-example.git']]]
+                git branch: 'main', credentialsId: 'git_credentials', url: 'https://github.com/opqdevops/java-tomcat-maven-example.git'
             }
         }
 
